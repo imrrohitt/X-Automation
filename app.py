@@ -31,14 +31,15 @@ def generate_content():
 
     # Define the prompt for generating concise content about ReactJS
     payload = {
-        'model': GROQ_MODEL,
-        'messages': [
-            {
-                'role': 'user',
-                'content': 'JS topic event loop with emojies also . Limit the response to around 200 characters.'
-            }
-        ]
+    'model': GROQ_MODEL,
+    'messages': [
+        {
+            'role': 'user',
+            'content': 'ReactJS coding tip or joke, limited to 280 characters. Keep it concise, fun, and relevant to ReactJS concepts. Include emojis if appropriate. Make sure not to exceed the limit.'
+        }
+      ]
     }
+
 
     try:
         print("Sending request to Groq API...")
@@ -125,10 +126,10 @@ def generate_and_post():
         print("Failed to generate content.")
 
 # Schedule the job for 9 AM and 9 PM
-schedule.every().day.at("09:00").do(generate_and_post)
+# schedule.every().day.at("09:00").do(generate_and_post)
 
 # Schedule the job to run every 2 minutes for testing
-# schedule.every(5).minutes.do(generate_and_post)
+schedule.every(1).minutes.do(generate_and_post)
 
 
 schedule.every().day.at("21:00").do(generate_and_post)
