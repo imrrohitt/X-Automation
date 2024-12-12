@@ -30,19 +30,15 @@ def generate_content():
     }
 
     # Define the prompt for generating concise content about ReactJS
-    payload = {
-    'model': GROQ_MODEL,
-    'messages': [
-        {
-            'role': 'user',
+     payload = {
+        'model': GROQ_MODEL,
+        'messages': [
             {
-              "content": "Crypto tip or joke, limited to 280 characters. Keep it concise, fun, and relevant to cryptocurrency concepts like market trends, tokens, or crypto memes. Include emojis if appropriate. Make sure not to exceed the character limit."
+                'role': 'user',
+                'content': "Crypto tip or joke, limited to 280 characters. Keep it concise, fun, and relevant to cryptocurrency concepts like market trends, tokens, or crypto memes. Include emojis if appropriate. Make sure not to exceed the character limit."
             }
-
-        }
-      ]
+        ]
     }
-
 
     try:
         print("Sending request to Groq API...")
