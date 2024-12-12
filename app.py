@@ -35,7 +35,10 @@ def generate_content():
     'messages': [
         {
             'role': 'user',
-            'content': 'ReactJS coding tip or joke, limited to 280 characters. Keep it concise, fun, and relevant to ReactJS concepts. Include emojis if appropriate. Make sure not to exceed the limit.'
+            {
+              "content": "Crypto tip or joke, limited to 280 characters. Keep it concise, fun, and relevant to cryptocurrency concepts like market trends, tokens, or crypto memes. Include emojis if appropriate. Make sure not to exceed the character limit."
+            }
+
         }
       ]
     }
