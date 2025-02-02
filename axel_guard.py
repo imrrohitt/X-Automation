@@ -265,7 +265,7 @@ def generate_and_post():
 # -------------------------
 # Scheduler: Run the job periodically
 # -------------------------
-schedule.every(1).minutes.do(generate_and_post)
+schedule.every(180).minutes.do(generate_and_post)
 
 if __name__ == "__main__":
     print(f"Scheduler started at {datetime.now()}")
