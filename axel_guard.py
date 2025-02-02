@@ -255,6 +255,7 @@ def generate_and_post():
     if content:
         # Append a relevant URL if the tweet content mentions product keywords
         content = maybe_append_url(content)
+        content = sanitize_content(content)
         print("Final generated tweet content:")
         print(content)
         # Uncomment the next line to post the tweet to Twitter.
